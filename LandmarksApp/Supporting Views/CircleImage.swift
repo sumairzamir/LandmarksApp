@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var image: Image
+    
     var body: some View {
-        Image("turtlerock")
+        // Replace hardcoded image here
+        image
             // Can add masks over the image itself
             .clipShape(Circle())
             .overlay(
@@ -20,6 +23,6 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage()
+        CircleImage(image: Image("turtlerock"))
     }
 }
